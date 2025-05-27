@@ -1,4 +1,4 @@
-#Restaurant Page
+Restaurant Page
 
 A modern, responsive single-page restaurant website built with vanilla JavaScript, Webpack, and custom CSS.
 
