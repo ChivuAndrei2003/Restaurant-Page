@@ -13,7 +13,11 @@ module.exports = {
   devServer: {
     static: "./dist",
     watchFiles: ["./src/template.html"],
-    open: true,
+    open: {
+      app: {
+        name:'google-chrome-stable',
+      }
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({

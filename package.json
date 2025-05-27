@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack serve"
+    "start": "BROWSER=google-chrome-stable webpack server"
   },
   "keywords": [],
   "author": "",

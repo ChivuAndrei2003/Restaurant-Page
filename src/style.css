@@ -1,0 +1,156 @@
+/* style.css */
+
+/* ==== Global Variables ==== */
+:root {
+  --color-primary: #333;
+  --color-secondary: #555;
+  --color-accent: #c59d5f;
+  --color-bg: #faf8f5;
+  --font-base: 'Arial', sans-serif;
+}
+
+/* ==== Reset & Basic Layout ==== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--color-bg);
+  color: var(--color-primary);
+  font-family: var(--font-base);
+}
+
+#content {
+  /* Leave space for header and footer */
+  padding-top: 80px;      /* header height */
+  padding-bottom: 100px;  /* footer height */
+  min-height: calc(100vh - 180px);
+}
+
+/* ==== Header & Navigation ==== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+nav button {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+nav button:hover,
+nav button.active {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+/* ==== Main Sections ==== */
+.home,
+.menu,
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.home h1,
+.menu h1,
+.about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.home p,
+.about p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* ==== Menu Section ==== */
+.menu h2 {
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+  display: inline-block;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.menu li {
+  background: var(--color-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  width: calc(50% - 1rem);
+  text-align: left;
+}
+
+.menu li strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-accent);
+}
+
+/* ==== Fixed Footer ==== */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #eaeaea;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+}
+
+.footer-content {
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-content a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}

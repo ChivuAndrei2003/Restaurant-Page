@@ -1,9 +1,11 @@
 export default function loadMenu() {
     
-    const contentContainer = document.getElementById('content');
+    const section = document.createElement('div');
 
-    contentContainer.innerHTML = 
-    `<div class="menu">
+    section.classList.add('menu');
+    
+    section.innerHTML = 
+    `
         <h1>Menu</h1>
 
         <h2>Food</h2>
@@ -20,10 +22,8 @@ export default function loadMenu() {
           <li><strong>Fresh Orange Juice</strong> 12 RON</li>
           <li><strong>House Lemonade</strong> 10 RON</li>
           <li><strong>Red Wine (glass)</strong> 15 RON</li>
-        </ul>
-
-      </div>`;
+        </ul>`;
     
-    return contentContainer.innerHTML;
+    return section;
 
 }
