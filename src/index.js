@@ -25,6 +25,6 @@ function addNavEvents(){
 }
 addNavEvents();
 
-//sa ma uit maine in gpt sa vad care e faza ca acolo am o posibila soluties
+
 
 
